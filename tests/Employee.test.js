@@ -1,4 +1,4 @@
-const { it } = require('node:test');
+
 const Employee = require ('../lib/Employee');
 
 describe("Employee", () => {
@@ -19,7 +19,7 @@ describe("Employee", () => {
       it('should return the employee id', () => {
         const employee = new Employee('Alex', 5, 'alex.barlow@rocketmail.com');
 
-        expect(employee.getId()).toEqual('5');
+        expect(employee.getId()).toEqual(5);
       })
       it('should return the employee email', () => {
         const employee = new Employee('Alex', 5, 'alex.barlow@rocketmail.com');
