@@ -29,9 +29,51 @@ const generatePage = (card) => {
 }
 
 //create function that creates a card when manager is chosen, use bootstrap card template
+const createManagerCard = (manager) => {
+    return `
+    <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${}</li>
+  </ul>
+    <div class="card-footer">
+    Card footer
+  </div>
+</div>
+    `
+} 
 
 //create function that creates a card when engineer is chosen, use bootstrap card template
+const createEngineerCard = (engineer) => {
+    return `
+    <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${}</li>
+  </ul>
+    <div class="card-footer">
+    Card footer
+  </div>
+</div>
+    `
+}
 
 //create function that creates a card when intern is chosen, use bootstrap card template
+const createInternCard = (intern) => {
+    return `
+    <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${}</li>
+  </ul>
+    <div class="card-footer">
+    Card footer
+  </div>
+</div>
+    `
+}
 
 module.exports = generatePage;
