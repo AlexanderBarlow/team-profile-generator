@@ -33,9 +33,10 @@ const createManagerCard = (manager) => {
     return `
     <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
-    <li class="list-group-item">${}</li>
-    <li class="list-group-item">${}</li>
-    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${manager.name}</li>
+    <li class="list-group-item">${manager.id}</li>
+    <li class="list-group-item">${manager.email}</li>
+    <li class="list-group-item">${manager.officeNumber}</li>
   </ul>
     <div class="card-footer">
     Card footer
@@ -49,9 +50,10 @@ const createEngineerCard = (engineer) => {
     return `
     <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
-    <li class="list-group-item">${}</li>
-    <li class="list-group-item">${}</li>
-    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${engineer.name}</li>
+    <li class="list-group-item">${engineer.id}</li>
+    <li class="list-group-item">${engineer.email}</li>
+    <li class="list-group-item">${engineer.github}</li>
   </ul>
     <div class="card-footer">
     Card footer
@@ -65,9 +67,10 @@ const createInternCard = (intern) => {
     return `
     <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
-    <li class="list-group-item">${}</li>
-    <li class="list-group-item">${}</li>
-    <li class="list-group-item">${}</li>
+    <li class="list-group-item">${intern.name}</li>
+    <li class="list-group-item">${intern.id}</li>
+    <li class="list-group-item">${intern.email}</li>
+    <li class="list-group-item">${intern.school}</li>
   </ul>
     <div class="card-footer">
     Card footer
