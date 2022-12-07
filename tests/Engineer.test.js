@@ -35,5 +35,11 @@ describe('Engineer', () => {
 
         expect(engineer.github).toEqual('AlexanderBarlow');
         });
+
+        it('should return role as engineer', () => {
+            const engineer = new Engineer('Alex', 5, 'alex.barlow@rocketmail.com', 'AlexanderBarlow');
+
+        expect(engineer.getRole()).toEqual('Engineer');
+        });
     })
 });
