@@ -28,4 +28,10 @@ const generatePage = (card) => {
     `;
 }
 
+//create function that creates a card when manager is chosen, use bootstrap card template
+
+//create function that creates a card when engineer is chosen, use bootstrap card template
+
+//create function that creates a card when intern is chosen, use bootstrap card template
+
 module.exports = generatePage;
