@@ -1,4 +1,6 @@
-const generatePage = (card) => {
+const Employee = require("../lib/Employee");
+
+const generateTemplate = (card) => {
     return`
     <!DOCTYPE html>
   <html lang="en">
@@ -26,7 +28,7 @@ const generatePage = (card) => {
   </body>
   </html>
     `;
-}
+};
 
 //create function that creates a card when manager is chosen, use bootstrap card template
 const createManagerCard = (manager) => {
@@ -43,7 +45,7 @@ const createManagerCard = (manager) => {
   </div>
 </div>
     `
-} 
+};
 
 //create function that creates a card when engineer is chosen, use bootstrap card template
 const createEngineerCard = (engineer) => {
@@ -60,7 +62,7 @@ const createEngineerCard = (engineer) => {
   </div>
 </div>
     `
-}
+};
 
 //create function that creates a card when intern is chosen, use bootstrap card template
 const createInternCard = (intern) => {
@@ -77,6 +79,38 @@ const createInternCard = (intern) => {
   </div>
 </div>
     `
+};
+
+
+//create a function that finds what role was chosen and adds that role related card to the page
+//mostly will be done with a for loop to account for multiple selections
+//create an array and add 
+const generatePage = (data) => {
+const roleChoices = [];
+
+for (let i = 0; i < data.length; i++) {
+    const roleChoice = data[i];
+    const role = Employee.getRole();
+
+    //conditional to generate cards based on role
+    if(role === 'Manager') {
+        const managerCard = createManagerCard(Employee)
+        roleChoices.push(managerCard);
+    }
+    //conditional to generate cards based on role
+    if(role === 'Engineer') {
+        const engineerCard = createEngineerCard(Employee)
+        roleChoices.push(engineerCard);
+    }
+    //conditional to generate cards based on role
+    if(role === 'Manager') {
+        const internCard = createInternCard(Employee)
+        roleChoices.push(internCard);
+    }
+}
+const card = roleChoices.join('');
+const generate = generateTemplate(card);
+return generate;
 }
 
 module.exports = generatePage;
