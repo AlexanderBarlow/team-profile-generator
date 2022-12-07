@@ -74,7 +74,7 @@ const manager = () => {
     })
 };
 
-const  employee = () => {
+const employee = () => {
     return inquirer.prompt ([
         {
             type: 'list',

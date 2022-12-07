@@ -40,9 +40,6 @@ const createManagerCard = (manager) => {
     <li class="list-group-item">${manager.email}</li>
     <li class="list-group-item">${manager.officeNumber}</li>
   </ul>
-    <div class="card-footer">
-    Card footer
-  </div>
 </div>
     `
 };
@@ -57,9 +54,6 @@ const createEngineerCard = (engineer) => {
     <li class="list-group-item">${engineer.email}</li>
     <li class="list-group-item">${engineer.github}</li>
   </ul>
-    <div class="card-footer">
-    Card footer
-  </div>
 </div>
     `
 };
@@ -74,9 +68,6 @@ const createInternCard = (intern) => {
     <li class="list-group-item">${intern.email}</li>
     <li class="list-group-item">${intern.school}</li>
   </ul>
-    <div class="card-footer">
-    Card footer
-  </div>
 </div>
     `
 };
