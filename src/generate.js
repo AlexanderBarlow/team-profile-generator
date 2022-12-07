@@ -90,7 +90,7 @@ const roleChoices = [];
 
 for (let i = 0; i < data.length; i++) {
     const roleChoice = data[i];
-    const role = Employee.getRole();
+    const role = roleChoice.getRole();
 
     //conditional to generate cards based on role
     if(role === 'Manager') {
