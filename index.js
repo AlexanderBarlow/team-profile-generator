@@ -8,7 +8,7 @@ const Intern = require('./lib/Intern')
 const roleChoices = [];
 
 //use inquirer to create prompt for user
-const manager = () => {
+const createManager = () => {
     return inquirer.prompt ([
         {
             type: 'input',
@@ -62,11 +62,11 @@ const manager = () => {
             }
         }
     ])
-    .then(managerInfo => {
-        const name = managerInfo.name;
-        const id = managerInfo.id;
-        const email = managerInfo.email;
-        const officeNumber = managerInfo.officeNumber;
+    .then(data => {
+        const name = data.name;
+        const id = data.id;
+        const email = data.email;
+        const officeNumber = data.officeNumber;
 
         const manager = new Manager(name, id, email, officeNumber);
 
@@ -169,7 +169,7 @@ const writeFile = data => {
     })
 }; 
 
-manager()
+createManager()
   .then(employee)
   .then(roleChoices => {
     return generate(roleChoices);
